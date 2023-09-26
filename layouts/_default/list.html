@@ -1,0 +1,39 @@
+{{ define "main" }}
+{{ partial "breadcrumb.html" . }}
+<div class="container-fluid">
+    <div class="row pb-4">
+        <h1>{{ .Title }}</h1>
+        <div class="p-2">
+            {{ .Content }}
+        </div>
+    </div>
+    <div class="row pb-4">
+        <h2>Sections</h2>
+        {{ if .Sections }}
+        <div class="p-4">
+            {{ range .Sections }}
+            <a href="{{ .RelPermalink }}" class="h3">{{ .LinkTitle }}</a>
+            {{ end }}
+        </div>
+        {{ else }}
+        <p>Nothing here...</p>
+        {{ end }}
+    </div>
+    <div class="row">
+        <h2>Posts</h2>
+        {{ if .RegularPages }}
+        <div class="container-md">
+            <ul class="list-group list-group-flush">
+                {{ range .RegularPages }}
+                <li class="list-group-item pb-4">
+                    <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ else }}
+        <p>Nothing here...</p>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

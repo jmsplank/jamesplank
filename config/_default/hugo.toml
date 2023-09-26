@@ -1,0 +1,7 @@
+baseURL = 'https://jamesplank.co.uk/'
+languageCode = 'en-us'
+title = 'James Plank'
+sectionPagesMenu = 'main'
+
+[params]
+    author = 'James Plank'

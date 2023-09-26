@@ -1,0 +1,25 @@
+{
+  "name": "jamesplank",
+  "version": "0.1.0",
+  "description": "james plank website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "exec-bin node_modules/.bin/hugo/hugo server -D --gc --disableFastRender",
+    "build": "exec-bin node_modules/.bin/hugo/hugo --gc --cleanDestinationDir --minify",
+    "build:serve": "python -m http.server --directory public",
+    "postinstall": "hugo-installer --version otherDependencies.hugo --extended --destination node_modules/.bin/hugo"
+  },
+  "author": "James Plank",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^10.4.15",
+    "bootstrap": "^5.3.2",
+    "exec-bin": "^1.0.0",
+    "hugo-installer": "^4.0.1",
+    "postcss": "^8.4.29",
+    "postcss-cli": "^10.1.0"
+  },
+  "otherDependencies": {
+    "hugo": "0.118.2"
+  }
+}

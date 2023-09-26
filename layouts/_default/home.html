@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="row pb-5">
+    {{ .Content }}
+</div>
+<div class="row">
+    <h2>Topics</h2>
+    <div class="col-12 p-4">
+        {{ range site.Sections }}
+        <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+        {{ .Summary }}
+        {{ end }}
+    </div>
+</div>
+{{ end }}
