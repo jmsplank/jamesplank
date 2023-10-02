@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "exec-bin node_modules/.bin/hugo/hugo server -D --gc --disableFastRender",
+    "dev:nodraft": "exec-bin node_modules/.bin/hugo/hugo server --gc --disableFastRender",
     "build": "exec-bin node_modules/.bin/hugo/hugo --gc --cleanDestinationDir --minify",
     "build:serve": "python -m http.server --directory public",
     "postinstall": "hugo-installer --version otherDependencies.hugo --extended --destination node_modules/.bin/hugo"

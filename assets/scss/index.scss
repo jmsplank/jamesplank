@@ -17,3 +17,13 @@ body {
     color: $body-color;
     font-size: 3rem;
 }
+
+@media print {
+    body {
+        background-color: white;
+        page-break-after: always;
+    }
+    .pagebreak {
+        page-break-before: always;
+    }
+}

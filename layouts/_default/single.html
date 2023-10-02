@@ -1,11 +1,13 @@
 {{ define "main" }}
 {{ partial "breadcrumb.html" . }}
-<h1>{{ .Title }}</h1>
+<div class="row pb-4">
+    <h1>{{ .Title }}</h1>
 
-{{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-{{ $dateHuman := .Date | time.Format ":date_long" }}
-<time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-
-{{ .Content }}
-{{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+    {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+    {{ $dateHuman := .Date | time.Format ":date_long" }}
+    <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+</div>
+<div class="row pb-4">
+    {{ .Content }}
+</div>
 {{ end }}

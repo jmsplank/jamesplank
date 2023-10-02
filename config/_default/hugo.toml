@@ -5,3 +5,8 @@ sectionPagesMenu = 'main'
 
 [params]
     author = 'James Plank'
+
+[markup]
+    [markup.goldmark]
+        [markup.goldmark.renderer]
+            unsafe = true

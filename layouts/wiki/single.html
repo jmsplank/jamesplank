@@ -1,17 +1,21 @@
 {{ define "main" }}
 {{ partial "breadcrumb.html" . }}
-<h1>{{ .Title }}</h1>
+<div class="row pb-4">
+    <h1>{{ .Title }}</h1>
 
-{{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
-{{ $dateHuman := .Date | time.Format ":date_long" }}
-<time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
-
-{{ .Content }}
-
-<ul class="pagination justify-content-between">
-    {{ partial "prevNext.html" (dict "page" .PrevInSection "text" "&laquo; Prev") }}
-    {{ partial "prevNext.html" (dict "page" .NextInSection "text" "Next &raquo;") }}
-</ul>
+    {{ $dateMachine := .Date | time.Format "2006-01-02T15:04:05-07:00" }}
+    {{ $dateHuman := .Date | time.Format ":date_long" }}
+    <time datetime="{{ $dateMachine }}">{{ $dateHuman }}</time>
+</div>
+<div class="row pb-4">
+    {{ .Content }}
+</div>
+<div class="row pb-4">
+    <ul class="pagination justify-content-between">
+        {{ partial "prevNext.html" (dict "page" .PrevInSection "text" "&laquo; Prev") }}
+        {{ partial "prevNext.html" (dict "page" .NextInSection "text" "Next &raquo;") }}
+    </ul>
+</div>
 {{ end }}
 
 {{ define "partials/prevNext.html" }}
