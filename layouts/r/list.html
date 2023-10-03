@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<head>
+    {{ partial "head.html" . }}
+</head>
+
+<body>
+    <div class="container-fluid container-md">
+        {{ partial "header.html" . }}
+        <main class="row">
+            {{ partial "r-list.html" . }}
+        </main>
+        <footer class="row pt-5">
+            <hr>
+            {{ partial "footer.html" . }}
+        </footer>
+    </div>
+</body>
+{{ end }}
+
+{{ define "partials/r-list.html" }}
+{{ partial "breadcrumb.html" . }}
+<h1>{{ .Title }}</h1>
+<ul class="list-group list-group-flush">
+    {{ range .RegularPages }}
+    <li class="list-group-item">
+        <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+    </li>
+    {{ end }}
+</ul>
+{{ end }}
