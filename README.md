@@ -6,11 +6,13 @@
    <a href="https://jamesplank.co.uk">jamesplank.co.uk</a>
 </p>
 
-![Static Badge](https://img.shields.io/badge/Hugo_version-0.118.2-pink)
-![GitHub last commit (branch)](https://img.shields.io/github/last-commit/jmsplank/jmsplank.github.io/main)
-![GitHub deployments](https://img.shields.io/github/deployments/jmsplank/jmsplank.github.io/github-pages?logo=github&color=orange)
-![Website](https://img.shields.io/website?up_message=online&up_color=blue&down_message=offline&down_color=red&url=https%3A%2F%2Fjamesplank.co.uk%2F)
-![GitHub](https://img.shields.io/github/license/jmsplank/jmsplank.github.io)
+<p align="center">
+   <img src="https://img.shields.io/badge/Hugo_version-0.118.2-pink" alt="Static Badge">
+   <img src="https://img.shields.io/github/last-commit/jmsplank/jmsplank.github.io/main" alt="GitHub last commit (branch)">
+   <img src="https://img.shields.io/github/deployments/jmsplank/jmsplank.github.io/github-pages?logo=github&color=orange" alt="GitHub deployments">
+   <img src="https://img.shields.io/website?up_message=online&up_color=blue&down_message=offline&down_color=red&url=https%3A%2F%2Fjamesplank.co.uk%2F" alt="Website">
+   <img src="https://img.shields.io/github/license/jmsplank/jmsplank.github.io" alt="GitHub">
+</p>
 
 This is the repository for my personal website [jamesplank.co.uk](https://jamesplank.co.uk), created using HUGO and deployed using GitHub pages.
 
