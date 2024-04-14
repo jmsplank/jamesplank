@@ -11,6 +11,10 @@
         <main class="row justify-content-center">
             {{ block "main" . }}{{ end }}
         </main>
+        <footer class="row pt-5 d-print-none">
+            <hr>
+            {{ partial "footer.html" .}}
+        </footer>
     </div>
 </body>
 
